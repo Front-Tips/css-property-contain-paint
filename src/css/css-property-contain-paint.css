@@ -1,0 +1,5 @@
+.elements {
+  &.paint {
+    contain: paint;
+  }
+}

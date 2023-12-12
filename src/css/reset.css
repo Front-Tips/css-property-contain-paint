@@ -1,0 +1,142 @@
+:root {
+  --primary-color: #00ff08;
+  --background-color: #181824;
+  --text-color: #fff;
+  --main-bg-color: #101019;
+  --gray-dark: #777;
+  --gray-darker: #555;
+
+  --border-radius: 1rem;
+  --fade-opacity: 0.2;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: "Open Sans", sans-serif;
+  height: 100%;
+  overflow: hidden;
+  user-select: none;
+}
+
+body {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+/* ------------------------ */
+/*       Main Elements      */
+/* ------------------------ */
+.elements {
+  background-color: var(--main-bg-color);
+  border: 3px solid var(--gray-darker);
+  height: 200px;
+  position: relative;
+  width: 200px;
+  border-radius: var(--border-radius);
+
+  div {
+    border: 2px solid var(--primary-color);
+    background-color: var(--background-color);
+    height: 100px;
+    position: absolute;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-color);
+    font-size: 0.9rem;
+    border-radius: var(--border-radius);
+  }
+
+  p {
+    margin: 5px;
+    color: var(--gray-dark);
+    text-align: center;
+  }
+
+  b {
+    color: var(--text-color);
+  }
+}
+
+/* ------------------------ */
+/*      Shadow Elements     */
+/* ------------------------ */
+.elements--shadow {
+  opacity: 0;
+  position: absolute;
+
+  &.fade {
+    opacity: var(--fade-opacity);
+
+    div {
+      border-style: dashed;
+    }
+  }
+}
+
+/* ------------------------ */
+/*           Main           */
+/* ------------------------ */
+.inside {
+  left: 25%;
+  top: 25%;
+}
+
+.outside {
+  left: -60%;
+  top: -60%;
+}
+
+.partial {
+  left: 80%;
+  top: 80%;
+}
+
+/* ------------------------ */
+/*         Controls         */
+/* ------------------------ */
+.controls {
+  position: absolute;
+  top: 15px;
+  text-align: center;
+
+  h1 {
+    font-size: 1.3rem;
+    margin-bottom: 0.3rem;
+  }
+
+  button {
+    background-color: var(--background-color);
+    border: 2px solid var(--gray-darker);
+    color: var(--text-color);
+    padding: 0.5rem 1rem;
+    margin: 0.2rem;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s, border-color 0.3s;
+
+    &:hover {
+      border-color: var(--gray-dark);
+    }
+
+    &.active {
+      background-color: var(--primary-color);
+      border-color: var(--primary-color);
+      color: var(--background-color);
+    }
+  }
+}
