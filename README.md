@@ -4,4 +4,4 @@ Using the CSS `contain: paint` which improves performance by limiting the layout
 
 ## Tips Links
 
-[CSS Containment paint](https://front.tips/css-contain-paint)
+[CSS Containment paint](https://front.tips/css-property-contain-paint)
